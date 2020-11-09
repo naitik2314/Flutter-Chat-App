@@ -89,7 +89,9 @@ class _AuthFormState extends State<AuthForm> {
                   ),
                   FlatButton(
                       textColor: Theme.of(context).primaryColor,
-                      child: Text('Create New Account'),
+                      child: Text(_isLogin
+                          ? 'Create New Account'
+                          : 'I already have an account'),
                       onPressed: () {
                         setState(() {
                           _isLogin = !_isLogin;

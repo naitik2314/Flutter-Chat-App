@@ -9,7 +9,7 @@ class _AuthFormState extends State<AuthForm> {
   final _formKey = GlobalKey<FormState>();
   String _userEmail = '';
   String _userName = '';
-  String _userpassword = '';
+  String _userPassword = '';
 
   void _trySubmit() {
     final isValid = _formKey.currentState.validate();
@@ -57,6 +57,9 @@ class _AuthFormState extends State<AuthForm> {
                     decoration: InputDecoration(
                       labelText: 'Username',
                     ),
+                    onSaved: (value) {
+                      _userName = value;
+                    },
                   ), //Username
                   TextFormField(
                     validator: (value) {
@@ -68,6 +71,9 @@ class _AuthFormState extends State<AuthForm> {
                     decoration: InputDecoration(
                       labelText: 'Password',
                     ),
+                    onSaved: (value) {
+                      _userPassword = value;
+                    },
                     obscureText: true,
                   ), //Password
                   SizedBox(height: 12),

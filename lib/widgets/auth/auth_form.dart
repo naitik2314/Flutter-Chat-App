@@ -7,9 +7,16 @@ class AuthForm extends StatefulWidget {
 
 class _AuthFormState extends State<AuthForm> {
   final _formKey = GlobalKey<FormState>();
+  String _userEmail = '';
+  String _userName = '';
+  String _userpassword = '';
 
   void _trySubmit() {
-    _formKey.currentState.validate();
+    final isValid = _formKey.currentState.validate();
+
+    if (isValid) {
+      _formKey.currentState.save();
+    } //If all of the validator return Null values.
   }
 
   @override
@@ -36,6 +43,7 @@ class _AuthFormState extends State<AuthForm> {
                     decoration: InputDecoration(
                       labelText: 'Email Address',
                     ),
+                    onSaved: (value) {},
                   ), //Email field
                   TextFormField(
                     validator: (value) {

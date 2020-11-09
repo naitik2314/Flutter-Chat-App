@@ -29,7 +29,11 @@ class _AuthFormState extends State<AuthForm> {
                       labelText: 'Username',
                     ),
                   ), //Username
-                  TextFormField(), //Password
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                    ),
+                  ), //Password
                 ],
               ),
             ),

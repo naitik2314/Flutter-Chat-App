@@ -84,7 +84,7 @@ class _AuthFormState extends State<AuthForm> {
                   ), //Password
                   SizedBox(height: 12),
                   RaisedButton(
-                    child: Text('Login'),
+                    child: Text(_isLogin ? 'Login' : 'Signup'),
                     onPressed: _trySubmit,
                   ),
                   FlatButton(

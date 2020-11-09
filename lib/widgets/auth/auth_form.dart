@@ -39,6 +39,7 @@ class _AuthFormState extends State<AuthForm> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   TextFormField(
+                    key: ValueKey('email'),
                     validator: (value) {
                       if (value.isEmpty || !value.contains('@')) {
                         return ' Please enter a valid email address.';
@@ -53,21 +54,24 @@ class _AuthFormState extends State<AuthForm> {
                       _userEmail = value;
                     },
                   ), //Email field
+                  if (!_isLogin)
+                    TextFormField(
+                      key: ValueKey('username'),
+                      validator: (value) {
+                        if (value.isEmpty || value.length < 4) {
+                          return 'Username length must be at least 4 characters';
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        labelText: 'Username',
+                      ),
+                      onSaved: (value) {
+                        _userName = value;
+                      },
+                    ), //Username
                   TextFormField(
-                    validator: (value) {
-                      if (value.isEmpty || value.length < 4) {
-                        return 'Username length must be at least 4 characters';
-                      }
-                      return null;
-                    },
-                    decoration: InputDecoration(
-                      labelText: 'Username',
-                    ),
-                    onSaved: (value) {
-                      _userName = value;
-                    },
-                  ), //Username
-                  TextFormField(
+                    key: ValueKey('password'),
                     validator: (value) {
                       if (value.isEmpty || value.length < 7) {
                         return 'Password should be atleast 7 characters long';

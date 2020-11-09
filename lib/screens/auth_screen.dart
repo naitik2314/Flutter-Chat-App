@@ -11,10 +11,11 @@ class _AuthScreenState extends State<AuthScreen> {
   final _auth = FirebaseAuth.instance;
 
   void _submitAuthForm(
-      String email, String password, String username, bool isLogin) {
+      String email, String password, String username, bool isLogin) async {
     AuthResult authResult;
     if (isLogin) {
-      _auth.signInWithEmailAndPassword(email: email, password: password);
+      authResult = await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
     } else {}
   }
 

@@ -16,7 +16,10 @@ class _AuthScreenState extends State<AuthScreen> {
     if (isLogin) {
       authResult = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
-    } else {}
+    } else {
+      authResult = await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+    }
   }
 
   @override

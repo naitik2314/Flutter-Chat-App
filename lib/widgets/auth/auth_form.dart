@@ -19,6 +19,13 @@ class _AuthFormState extends State<AuthForm> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   TextFormField(
+                    validator: (value) {
+                      if (value.isEmpty || !value.contains('@')) {
+                        return ' Please enter a valid email address.';
+                      } else {
+                        return null;
+                      }
+                    },
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       labelText: 'Email Address',

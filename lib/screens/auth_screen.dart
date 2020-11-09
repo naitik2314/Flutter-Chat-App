@@ -13,6 +13,7 @@ class _AuthScreenState extends State<AuthScreen> {
   void _submitAuthForm(
       String email, String password, String username, bool isLogin) {
     if (isLogin) {
+      _auth.signInWithEmailAndPassword(email: email, password: password);
     } else {}
   }
 

@@ -91,7 +91,9 @@ class _AuthFormState extends State<AuthForm> {
                       textColor: Theme.of(context).primaryColor,
                       child: Text('Create New Account'),
                       onPressed: () {
-                        _isLogin = !_isLogin;
+                        setState(() {
+                          _isLogin = !_isLogin;
+                        });
                       }),
                 ],
               ),

@@ -24,7 +24,11 @@ class _AuthFormState extends State<AuthForm> {
                       labelText: 'Email Address',
                     ),
                   ), //Email field
-                  TextFormField(), //Username
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Username',
+                    ),
+                  ), //Username
                   TextFormField(), //Password
                 ],
               ),

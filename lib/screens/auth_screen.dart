@@ -8,6 +8,8 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   @override
+  void _submitAuthForm(
+      String email, String password, String username, bool isLogin) {}
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,

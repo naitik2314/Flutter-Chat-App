@@ -23,9 +23,11 @@ class _AuthFormState extends State<AuthForm> {
 
     if (isValid) {
       _formKey.currentState.save();
-      print(_userEmail);
-      print(_userName);
-      print(_userPassword);
+      widget.submitFn(
+        _userEmail,
+        _userPassword,
+        _userName,
+      );
       //Use those values to send our Auth values
     } //If all of the validator return Null values.
   }

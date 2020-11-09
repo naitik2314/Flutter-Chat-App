@@ -13,9 +13,13 @@ class _AuthFormState extends State<AuthForm> {
 
   void _trySubmit() {
     final isValid = _formKey.currentState.validate();
+    FocusScope.of(context).unfocus();
 
     if (isValid) {
       _formKey.currentState.save();
+      print(_userEmail);
+      print(_userName);
+      print(_userPassword);
       //Use those values to send our Auth values
     } //If all of the validator return Null values.
   }

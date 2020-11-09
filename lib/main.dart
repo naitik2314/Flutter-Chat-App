@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Chat App',
       theme: ThemeData(
         primarySwatch: Colors.pink,
+        backgroundColor: Colors.pink,
+        accentColor: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: AuthScreen(),

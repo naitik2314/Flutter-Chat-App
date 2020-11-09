@@ -24,6 +24,10 @@ class _AuthScreenState extends State<AuthScreen> {
       }
     } on PlatformException catch (err) {
       var message = 'An error occurred please check your credentials';
+
+      if (err.message != null) {
+        message = err.message;
+      }
     }
   }
 

@@ -84,7 +84,7 @@ class _AuthFormState extends State<AuthForm> {
                   SizedBox(height: 12),
                   RaisedButton(
                     child: Text('Login'),
-                    onPressed: () {},
+                    onPressed: _trySubmit,
                   ),
                   FlatButton(
                       textColor: Theme.of(context).primaryColor,

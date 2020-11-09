@@ -33,6 +33,7 @@ class _AuthFormState extends State<AuthForm> {
                     decoration: InputDecoration(
                       labelText: 'Password',
                     ),
+                    obscureText: true,
                   ), //Password
                 ],
               ),

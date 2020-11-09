@@ -14,7 +14,12 @@ class _AuthFormState extends State<AuthForm> {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(16),
-            child: Form(),
+            child: Form(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[],
+              ),
+            ),
           ),
         ),
       ),

@@ -19,6 +19,9 @@ class MyApp extends StatelessWidget {
         accentColorBrightness: Brightness.dark,
         buttonTheme: ButtonTheme.of(context).copyWith(
           buttonColor: Colors.pink,
+          textTheme: ButtonTextTheme.primary,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

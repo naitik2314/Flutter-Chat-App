@@ -43,7 +43,9 @@ class _AuthFormState extends State<AuthForm> {
                     decoration: InputDecoration(
                       labelText: 'Email Address',
                     ),
-                    onSaved: (value) {},
+                    onSaved: (value) {
+                      _userEmail = value;
+                    },
                   ), //Email field
                   TextFormField(
                     validator: (value) {

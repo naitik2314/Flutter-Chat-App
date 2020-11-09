@@ -32,11 +32,23 @@ class _AuthFormState extends State<AuthForm> {
                     ),
                   ), //Email field
                   TextFormField(
+                    validator: (value) {
+                      if (value.isEmpty || value.length < 4) {
+                        return 'Username length must be at least 4 characters';
+                      }
+                      return null;
+                    },
                     decoration: InputDecoration(
                       labelText: 'Username',
                     ),
                   ), //Username
                   TextFormField(
+                    validator: (value) {
+                      if (value.isEmpty || value.length < 7) {
+                        return 'Password should be atleast 7 characters long';
+                      }
+                      return null;
+                    },
                     decoration: InputDecoration(
                       labelText: 'Password',
                     ),

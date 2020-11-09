@@ -40,6 +40,8 @@ class _AuthFormState extends State<AuthForm> {
                     child: Text('Login'),
                     onPressed: () {},
                   ),
+                  FlatButton(
+                      child: Text('Create New Account'), onPressed: () {}),
                 ],
               ),
             ),

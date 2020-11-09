@@ -7,9 +7,10 @@ class AuthForm extends StatefulWidget {
 
 class _AuthFormState extends State<AuthForm> {
   final _formKey = GlobalKey<FormState>();
-  String _userEmail = '';
-  String _userName = '';
-  String _userPassword = '';
+  var _isLogin = true;
+  var _userEmail = '';
+  var _userName = '';
+  var _userPassword = '';
 
   void _trySubmit() {
     final isValid = _formKey.currentState.validate();

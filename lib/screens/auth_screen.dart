@@ -11,7 +11,12 @@ class _AuthScreenState extends State<AuthScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Center(
-        child: Card(margin: EdgeInsets.all(20)),
+        child: Card(
+          margin: EdgeInsets.all(20),
+          child: SingleChildScrollView(
+            child: Padding(padding: EdgeInsets.all(16), child: Form()),
+          ),
+        ),
       ),
     );
   }

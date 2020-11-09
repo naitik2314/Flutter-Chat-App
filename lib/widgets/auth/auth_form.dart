@@ -17,7 +17,11 @@ class _AuthFormState extends State<AuthForm> {
             child: Form(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                children: <Widget>[],
+                children: <Widget>[
+                  TextFormField(), //Email field
+                  TextFormField(), //Username
+                  TextFormField(), //Password
+                ],
               ),
             ),
           ),

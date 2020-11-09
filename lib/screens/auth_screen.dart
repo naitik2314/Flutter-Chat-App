@@ -30,11 +30,13 @@ class _AuthScreenState extends State<AuthScreen> {
       }
 
       Scaffold.of(context).showSnackBar(
-        Snackbar(
+        SnackBar(
           content: Text(message),
           backgroundColor: Theme.of(context).errorColor,
         ),
       );
+    } catch (err) {
+      print(err);
     }
   }
 

@@ -27,6 +27,7 @@ class _AuthScreenState extends State<AuthScreen> {
             .document(authResult.user.uid)
             .setData({
           'username': username,
+          'email': email,
         });
       }
     } on PlatformException catch (err) {

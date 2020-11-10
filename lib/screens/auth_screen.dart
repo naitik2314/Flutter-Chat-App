@@ -11,8 +11,8 @@ class AuthScreen extends StatefulWidget {
 class _AuthScreenState extends State<AuthScreen> {
   final _auth = FirebaseAuth.instance;
 
-  void _submitAuthForm(
-      String email, String password, String username, bool isLogin) async {
+  void _submitAuthForm(String email, String password, String username,
+      bool isLogin, BuildContext ctx) async {
     AuthResult authResult;
     try {
       if (isLogin) {
@@ -29,10 +29,10 @@ class _AuthScreenState extends State<AuthScreen> {
         message = err.message;
       }
 
-      Scaffold.of(context).showSnackBar(
+      Scaffold.of(ctx).showSnackBar(
         SnackBar(
           content: Text(message),
-          backgroundColor: Theme.of(context).errorColor,
+          backgroundColor: Theme.of(ctx).errorColor,
         ),
       );
     } catch (err) {

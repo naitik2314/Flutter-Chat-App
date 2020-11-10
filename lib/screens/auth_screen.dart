@@ -22,7 +22,7 @@ class _AuthScreenState extends State<AuthScreen> {
       } else {
         authResult = await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
-        Firestore.instance
+        await Firestore.instance
             .collection('users')
             .document(authResult.user.uid)
             .setData({

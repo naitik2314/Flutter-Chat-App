@@ -22,7 +22,7 @@ class _AuthScreenState extends State<AuthScreen> {
       } else {
         authResult = await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
-        Firestore.instance.collection('users').document();
+        Firestore.instance.collection('users').document(authResult.user.uid);
       }
     } on PlatformException catch (err) {
       var message = 'An error occurred please check your credentials';

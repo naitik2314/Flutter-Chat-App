@@ -17,6 +17,9 @@ class _AuthScreenState extends State<AuthScreen> {
       bool isLogin, BuildContext ctx) async {
     AuthResult authResult;
     try {
+      setState(() {
+        _isLoading = true;
+      });
       if (isLogin) {
         authResult = await _auth.signInWithEmailAndPassword(
             email: email, password: password);

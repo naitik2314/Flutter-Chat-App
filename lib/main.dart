@@ -29,7 +29,9 @@ class MyApp extends StatelessWidget {
       home: StreamBuilder(
         stream: FirebaseAuth.instance.onAuthStateChanged,
         builder: (ctx, userSnapshot) {
-          if (userSnapshot.hasData) {}
+          if (userSnapshot.hasData) {
+            return ChatScreen();
+          }
         },
       ),
     );

@@ -8,7 +8,7 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Chat App'),
-        actions: [],
+        actions: [DropdownButton(items: null, onChanged: null)],
       ),
       body: StreamBuilder(
         stream: Firestore.instance

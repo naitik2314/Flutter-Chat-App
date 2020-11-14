@@ -12,7 +12,7 @@ class ChatScreen extends StatelessWidget {
           DropdownButton(
             icon: Icon(
               Icons.more_vert,
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).primaryIconTheme.color,
             ),
           )
         ],

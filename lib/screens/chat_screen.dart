@@ -28,6 +28,7 @@ class ChatScreen extends StatelessWidget {
                 value: 'logout',
               )
             ],
+            onChanged: (itemIdentifier) {},
           )
         ],
       ),

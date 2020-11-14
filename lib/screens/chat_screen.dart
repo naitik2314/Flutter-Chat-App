@@ -18,7 +18,10 @@ class ChatScreen extends StatelessWidget {
               DropdownMenuItem(
                   child: Container(
                 child: Row(
-                  children: <Widget>[],
+                  children: <Widget>[
+                    Icon(Icons.exit_to_app),
+                    Text('Logout'),
+                  ],
                 ),
               ))
             ],

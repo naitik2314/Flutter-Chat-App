@@ -14,7 +14,14 @@ class ChatScreen extends StatelessWidget {
               Icons.more_vert,
               color: Theme.of(context).primaryIconTheme.color,
             ),
-            items: [DropdownMenuItem()],
+            items: [
+              DropdownMenuItem(
+                  child: Container(
+                child: Row(
+                  children: <Widget>[],
+                ),
+              ))
+            ],
           )
         ],
       ),

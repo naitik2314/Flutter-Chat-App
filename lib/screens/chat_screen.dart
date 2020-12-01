@@ -37,24 +37,9 @@ class ChatScreen extends StatelessWidget {
           )
         ],
       ),
-      body: StreamBuilder(
-        stream: Firestore.instance
-            .collection('chats/xM2CEI5mrSU46gCL5IhN/messages')
-            .snapshots(),
-        builder: (ctx, streamSnapshot) {
-          if (streamSnapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          }
-          final documents = streamSnapshot.data.documents;
-          return ListView.builder(
-            itemCount: documents.length,
-            itemBuilder: (ctx, index) => Container(
-              padding: EdgeInsets.all(8),
-              child: Text(documents[index]['text']),
-            ),
-          );
-        },
-      ),
+      body: Ccontainer(child; Column(children: <Widget>[
+        
+      ],),),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {

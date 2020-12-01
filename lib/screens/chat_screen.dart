@@ -1,3 +1,4 @@
+import 'package:chatapp/widgets/chat/messages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -37,9 +38,11 @@ class ChatScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Container(child; Column(children: <Widget>[
-
-      ],),),
+      body: Container(
+        child: Column(
+          children: <Widget>[Messages()],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {

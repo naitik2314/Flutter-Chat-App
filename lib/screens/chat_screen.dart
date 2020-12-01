@@ -37,8 +37,8 @@ class ChatScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Ccontainer(child; Column(children: <Widget>[
-        
+      body: Container(child; Column(children: <Widget>[
+
       ],),),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

@@ -6,7 +6,7 @@ class Messages extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder(
       stream: Firestore.instance.collection('chat').snapshots(),
-      builder:
+      builder: (ctx),
     );
   }
 }

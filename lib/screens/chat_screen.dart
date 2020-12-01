@@ -40,7 +40,11 @@ class ChatScreen extends StatelessWidget {
       ),
       body: Container(
         child: Column(
-          children: <Widget>[Messages()],
+          children: <Widget>[
+            Expanded(
+              child: Messages(),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(

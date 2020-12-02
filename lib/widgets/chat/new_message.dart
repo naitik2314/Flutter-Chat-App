@@ -13,7 +13,9 @@ class _NewMessageState extends State<NewMessage> {
         padding: EdgeInsets.all(8),
         child: Row(
           children: <Widget>[
-            TextField(),
+            Expanded(
+              child: TextField(),
+            ),
           ],
         ));
   }

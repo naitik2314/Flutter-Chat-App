@@ -6,6 +6,7 @@ class NewMessage extends StatefulWidget {
 }
 
 class _NewMessageState extends State<NewMessage> {
+  var _enteredMessage = '';
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,13 +17,18 @@ class _NewMessageState extends State<NewMessage> {
             Expanded(
               child: TextField(
                 decoration: InputDecoration(labelText: 'Send a message'),
-                onChanged: (value) {},
+                onChanged: (value) {
+                  setState(() {
+                    _enteredMessage = value;
+                  });
+                },
               ),
             ),
             IconButton(
-                color: Theme.of(context).primaryColor,
-                icon: Icon(Icons.send),
-                onPressed: () {})
+              color: Theme.of(context).primaryColor,
+              icon: Icon(Icons.send),
+              onPressed: () {},
+            )
           ],
         ));
   }

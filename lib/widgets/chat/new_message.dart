@@ -11,7 +11,7 @@ class _NewMessageState extends State<NewMessage> {
 
   void _sendMessage() {
     FocusScope.of(context).unfocus();
-    Firestore.instance.collection('Chat').add({
+    Firestore.instance.collection('chat').add({
       'text': _enteredMessage,
     });
   }

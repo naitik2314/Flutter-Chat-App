@@ -14,7 +14,8 @@ class _NewMessageState extends State<NewMessage> {
         child: Row(
           children: <Widget>[
             Expanded(
-              child: TextField(),
+              child: TextField(
+                  decoration: InputDecoration(labelText: 'Send a message')),
             ),
           ],
         ));

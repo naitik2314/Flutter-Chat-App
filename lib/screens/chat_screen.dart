@@ -49,14 +49,6 @@ class ChatScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          Firestore.instance
-              .collection('chats/xM2CEI5mrSU46gCL5IhN/messages')
-              .add({'text': 'Wow'});
-        },
-      ),
     );
   }
 }

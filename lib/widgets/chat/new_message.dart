@@ -15,8 +15,14 @@ class _NewMessageState extends State<NewMessage> {
           children: <Widget>[
             Expanded(
               child: TextField(
-                  decoration: InputDecoration(labelText: 'Send a message')),
+                decoration: InputDecoration(labelText: 'Send a message'),
+                onChanged: (value) {},
+              ),
             ),
+            IconButton(
+              color: Theme.of(context).primaryColor,
+              icon: Icon(Icons.send),
+            )
           ],
         ));
   }

@@ -8,6 +8,10 @@ class MessageBubble extends StatelessWidget {
           color: Theme.of(context).accentColor,
           borderRadius: BorderRadius.circular(12),
         ),
-        width: 140);
+        width: 140,
+        padding: EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 16,
+        ));
   }
 }

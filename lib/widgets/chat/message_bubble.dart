@@ -12,9 +12,11 @@ class MessageBubble extends StatelessWidget {
       children: <Widget>[
         Container(
           decoration: BoxDecoration(
-            color: isMe ? Colors.grey[300] : Theme.of(context).accentColor,
-            borderRadius: BorderRadius.circular(12),
-          ),
+              color: isMe ? Colors.grey[300] : Theme.of(context).accentColor,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(12),
+                topRight: Radius.circular(12),
+              )),
           width: 140,
           padding: EdgeInsets.symmetric(
             vertical: 10,

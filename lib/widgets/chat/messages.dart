@@ -22,7 +22,7 @@ class Messages extends StatelessWidget {
         return FutureBuilder(
             future: FirebaseAuth.instance.currentUser(),
             builder: (ctx, futureSnapshot) {
-              if (futuresnapshot.connectionState == ConnectionState.waiting) {
+              if (futureSnapshot.connectionState == ConnectionState.waiting) {
                 return Center(
                   child: CircularProgressIndicator(),
                 );

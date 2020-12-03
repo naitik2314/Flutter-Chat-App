@@ -27,7 +27,7 @@ class Messages extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 );
               }
-              ListView.builder(
+              return ListView.builder(
                 reverse: true,
                 itemCount: chatDocs.length,
                 itemBuilder: (ctx, index) => MessageBubble(

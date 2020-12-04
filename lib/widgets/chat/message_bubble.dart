@@ -1,11 +1,13 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 class MessageBubble extends StatelessWidget {
-  MessageBubble(this.message, this.username, this.isMe, {this.key});
+  MessageBubble(this.message, this.userId, this.isMe, {this.key});
 
   final Key key;
   final String message;
-  final String username;
+  final String userId;
   final bool isMe;
 
   @override
@@ -30,7 +32,7 @@ class MessageBubble extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
           child: Column(
             children: <Widget>[
-              Text(username, style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(userId, style: TextStyle(fontWeight: FontWeight.bold)),
               Text(
                 message,
                 style: TextStyle(

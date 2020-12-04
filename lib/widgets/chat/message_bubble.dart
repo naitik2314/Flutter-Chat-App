@@ -30,7 +30,7 @@ class MessageBubble extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
           child: Column(
             children: <Widget>[
-              Text(userId, style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(username, style: TextStyle(fontWeight: FontWeight.bold)),
               Text(
                 message,
                 style: TextStyle(

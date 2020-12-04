@@ -41,7 +41,14 @@ class MessageBubble extends StatelessWidget {
                       return Text('Loading...');
                     }
                     return Text(snapshot.data['username'],
-                        style: TextStyle(fontWeight: FontWeight.bold));
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: isMe
+                                ? Colors.black
+                                : Theme.of(context)
+                                    .accentTextTheme
+                                    .headline1
+                                    .color));
                   }),
               Text(
                 message,

@@ -48,6 +48,7 @@ class _AuthFormState extends State<AuthForm> {
                     radius: 40,
                   ),
                   FlatButton.icon(
+                    textColor: Theme.of(context).primaryColor,
                     onPressed: () {},
                     icon: Icon(Icons.image),
                     label: Text('Add Image'),

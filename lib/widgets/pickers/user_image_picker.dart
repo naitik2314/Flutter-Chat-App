@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:chatapp/widgets/pickers/user_image_picker.dart';
 import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class UserImagePicker extends StatefulWidget {
   @override
@@ -8,8 +9,10 @@ class UserImagePicker extends StatefulWidget {
 }
 
 class _UserImagePickerState extends State<UserImagePicker> {
-  void _pickImage() {
-    ImagePicker.pickImage(source: null);
+  void _pickImage() async {
+    final picker = ImagePicker();
+    final pickedImage = await picker.getImage(source: ImageSource.camera);
+    final pickedImageFile = File(pickedImage.path);
   }
 
   @override
@@ -20,7 +23,7 @@ class _UserImagePickerState extends State<UserImagePicker> {
       ),
       FlatButton.icon(
         textColor: Theme.of(context).primaryColor,
-        onPressed: () {},
+        onPressed: _pickImage,
         icon: Icon(Icons.image),
         label: Text('Add Image'),
       )

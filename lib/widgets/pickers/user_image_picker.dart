@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chatapp/widgets/pickers/user_image_picker.dart';
+import 'package:image_picker/image_picker.dart';
 
 class UserImagePicker extends StatefulWidget {
   @override
@@ -7,7 +8,10 @@ class UserImagePicker extends StatefulWidget {
 }
 
 class _UserImagePickerState extends State<UserImagePicker> {
-  void _pickImage() {}
+  void _pickImage() {
+    ImagePicker.pickImage(source: null);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[

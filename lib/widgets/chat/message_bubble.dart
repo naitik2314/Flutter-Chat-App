@@ -30,6 +30,8 @@ class MessageBubble extends StatelessWidget {
           ),
           margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
           child: Column(
+            crossAxisAlignment:
+                isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
             children: <Widget>[
               FutureBuilder(
                   future: Firestore.instance

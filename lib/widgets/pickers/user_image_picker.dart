@@ -23,7 +23,7 @@ class _UserImagePickerState extends State<UserImagePicker> {
     return Column(children: <Widget>[
       CircleAvatar(
         radius: 40,
-        backgroundImage: FileImage(_pickedImage),
+        backgroundImage: _pickedImage != null ? FileImage(_pickedImage) : null,
       ),
       FlatButton.icon(
         textColor: Theme.of(context).primaryColor,

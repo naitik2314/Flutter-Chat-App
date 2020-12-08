@@ -1,6 +1,5 @@
 import 'package:chatapp/widgets/pickers/user_image_picker.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
 
 class AuthForm extends StatefulWidget {
   AuthForm(this.submitFn, this.isLoading);

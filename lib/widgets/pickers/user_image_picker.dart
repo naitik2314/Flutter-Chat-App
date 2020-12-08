@@ -14,6 +14,9 @@ class _UserImagePickerState extends State<UserImagePicker> {
     final picker = ImagePicker();
     final pickedImage = await picker.getImage(source: ImageSource.camera);
     final pickedImageFile = File(pickedImage.path);
+    setState(() {
+      _pickedImage = pickedImageFile;
+    });
   }
 
   @override

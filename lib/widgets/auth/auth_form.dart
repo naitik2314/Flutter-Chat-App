@@ -23,7 +23,9 @@ class _AuthFormState extends State<AuthForm> {
   var _userPassword = '';
   File _userImageFile;
 
-  void _pickedImage(File image) {}
+  void _pickedImage(File image) {
+    _userImageFile = image;
+  }
 
   void _trySubmit() {
     final isValid = _formKey.currentState.validate();

@@ -21,7 +21,7 @@ class _AuthFormState extends State<AuthForm> {
   var _userEmail = '';
   var _userName = '';
   var _userPassword = '';
-  var _userImageFile;
+  File _userImageFile;
 
   void _pickedImage(File image) {}
 

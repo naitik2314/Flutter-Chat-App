@@ -57,6 +57,7 @@ class MessageBubble extends StatelessWidget {
           ),
         ],
       ),
+      CircleAvatar(),
     ]);
   }
 }
